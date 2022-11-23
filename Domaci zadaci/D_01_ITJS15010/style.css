@@ -1,0 +1,61 @@
+body {
+
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: rgb(222, 222, 243);
+    color: rgb(7, 7, 114);
+       
+    }
+
+header {
+
+    background-color: rgb(147, 147, 236);
+}
+
+.footer {
+
+    font-size: 20px;
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    
+}
+
+
+.nav_bar li {
+
+    font-size: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    padding: 30px;
+
+
+}
+
+.bansko_slika img {
+
+    padding: 20px;
+
+}
+
+a {
+
+    text-decoration: none;
+}
+
+a:visited {
+
+    color: blueviolet;
+    text-decoration: none;
+
+
+}
+
+a:hover {
+
+    cursor:cell;
+   
+}
