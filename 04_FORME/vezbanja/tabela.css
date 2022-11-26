@@ -1,0 +1,52 @@
+table, td, th {
+    border: 1px solid grey;
+}
+
+td {
+
+    padding: 3px;
+    
+}
+
+th {
+
+    text-align: left;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela1 {
+
+    margin-top: 30px;
+    max-width: 70%;
+    min-width: 50%;
+}
+
+.tabela2 {
+
+    margin-top: 30px;
+    max-width: 70%;
+    min-width: 50%;
+
+}
+
+.colored_row {
+
+    background-color: yellow;
+}
+
+.tabela2 th:nth-child(3) {
+
+    background-color: yellow;
+}
+
+.tabela2 td:nth-child(3) {
+
+    background-color: yellow;
+}
+
+
+
