@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pasos kucnog ljubimca</h1>
+        <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTZCSmCzmIPm0up8wmW566cK5w3sSTUChT5UnaU3VnFxrHwoRNSnks0xUBmj2r2oeJk" alt="cat">
+        <h1>Podaci kucnog ljubimca</h1>
+
+        <form action="" method="">
+          
+            <div class="col-25">
+                <label for="broj">Broj pasosa:</label>
+            </div>
+            <div class="col-75">
+                <input type="number" name="broj" id="broj" maxlength="">
+            </div>
+
+            <div class="col-25">
+                <label for="ime">Ime ljubimca:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="ime" id="ime">
+            </div>
+
+            <div class="col-25">
+                <label for="vrsta">Vrsta ljubimca:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="vrsta" id="vrsta">
+            </div>
+
+            <div class="col-25">
+                <label for="vlasnik">Vlasnik:</label>
+            </div>
+            <div class="col-75">
+                
+                <input onclick="document.getElementById('jmbg').disabled=false" type="radio" name="vlasnik" value="poznat" id="poznat" selected>Poznat
+                <input type="number" name="number" id="jmbg" maxlength="13" placeholder="JMBG"> <br>
+                
+                <input onclick="document.getElementById('jmbg').disabled=true" type="radio" name="vlasnik" value="nepoznat" id="nepoznat" >Nepoznat
+                
+            </div>
+            
+        </form>
+        <h1>Saglasnost</h1>
+        <ul type="square">
+            <li>Saglasan sam sa unetim podacima</li>
+            <li>Potpis podnosioca:
+                <input type="text" name="" id="potpis">
+            </li>
+            <li>Potpis veterinara:
+                <input type="text" name="" id="potpis">
+            </li>
+        </ul>
+        <!--ja msm da ovo mora preko tabela da se uradi, moram da probam-->
+    </div>
+    
+</body>
+</html>

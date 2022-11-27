@@ -1,0 +1,82 @@
+.container {
+
+    border: 5px double blue;
+    background-color: rgba(120, 116, 116, 0.632);
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 600px;
+    min-width: 500px;
+
+}
+
+img {
+
+    width: 450px;
+    height: 300px;
+    margin-left: 30px;
+    border: 5px dotted blue;
+}
+
+h1 {
+
+    color: green;
+    text-align: center;
+}
+
+
+.potpis {
+
+    border-bottom: solid black 1px;
+    margin-left: 150px;
+    margin-right: 300px;
+
+}
+
+li {
+
+    margin-top: 7px;
+}
+
+div {
+    
+    padding:5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 30px;
+}
+
+label {
+
+    display: inline-block;
+    
+}
+
+
+.col-25 {
+
+    float: left;
+    width: 25%;
+    
+
+
+}
+
+.com-75 {
+
+    float: left;
+    width: 75%;
+   
+}
+
+ul input{
+
+    border:none;
+    background-color: inherit;
+    border-bottom: 1px solid black;
+    
+}
+
+ul input:focus{
+
+    outline:none;
+}
