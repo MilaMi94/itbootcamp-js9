@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url("pizza.jpg");
+  position: fixed;
+  width: 100%;
+  height: 300px;
+}
+
+/* u gornjem levom uglu 
+div {
+
+    position: absolute;
+    left:0px;
+    top: 0px;
+}
+
+
+u gornjem desnom uglu 
+div {
+
+    position: absolute;
+    right:0px;
+    top: 0px;
+
+    }
+
+
+U donjem levom uglu headera,
+
+div {
+
+    position: absolute;
+    left:0px;
+    bottom: 0px;
+    
+    } 
+
+u donjem desnom uglu headera
+
+div {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+*/
+
+div {
+    
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;                         
+  transform: translate(50%, -50%);
+   
+
+  
+}

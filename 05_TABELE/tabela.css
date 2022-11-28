@@ -1,4 +1,4 @@
-table, td, th {
+td, th {
     border: 1px solid grey;
 }
 
@@ -38,15 +38,13 @@ table {
     background-color: yellow;
 }
 
-.tabela2 th:nth-child(3) {
+.tabela2 th:nth-child(3), .tabela2 td:nth-child(3)  {
 
     background-color: yellow;
 }
 
-.tabela2 td:nth-child(3) {
+/* ovde mogu da se spoje selektori u jednom redu .tabela th i .tabela td. */
 
-    background-color: yellow;
-}
 
 
 

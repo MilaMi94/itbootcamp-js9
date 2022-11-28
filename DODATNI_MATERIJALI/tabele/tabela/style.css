@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+th,td {
+  border: double blue;
+}
+
+table {
+  background: url(https://thumbs.dreamstime.com/b/beach-sea-18378306.jpg);
+  
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+}
