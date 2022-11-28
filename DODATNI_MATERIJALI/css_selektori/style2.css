@@ -16,12 +16,15 @@ span {
 span:nth-child(2) {
 
     background-color: grey;
-    
 }
 
-div:nth-child(2) {
+#treci span:nth-child(1) {
+
+    background-color: orange;
+}
+
+#treci {
 
     background-color: red;
     color: white;
 }
-

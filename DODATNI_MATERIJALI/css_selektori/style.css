@@ -1,25 +1,28 @@
-div{
+ div {
+
     background-color: blue;
-}
-
-div.green:nth-child(2) {
-
-    background-color: green;
     
-}
+   }
 
+.green {
+
+   background-color: green;
+
+
+   }
 span {
 
-    background-color: yellow;
+   background-color: yellow;
 }
 
-span:nth-child(2) {
+.sivi {
 
-    background-color: grey;
+   background-color: grey;
+
+
 }
+#treci {
 
-div:nth-child(2) {
-
-    background-color: red;
-    color: white;
+   background-color: red;
+   color:white;
 }
