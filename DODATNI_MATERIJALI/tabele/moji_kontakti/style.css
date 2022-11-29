@@ -1,0 +1,26 @@
+table {
+
+    border-collapse: collapse;
+    width: 700px;
+    height: 200px;
+    
+}
+
+td {
+
+    border: 1px solid black;
+}
+
+.logo td {
+
+    background-image:url("https://www.kindpng.com/picc/m/79-790709_customer-care-logo-png-transparent-png.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+   
+    
+}
+
+.logo {
+
+    height: 150px;
+}

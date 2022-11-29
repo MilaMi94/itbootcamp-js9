@@ -1,0 +1,45 @@
+#prva, #druga, #treca {
+
+    width: 500px;
+    height: 200px;
+    border-collapse: collapse; 
+    
+    /* ovo sluzi da se spoje  td da nema zapravo margina izmedju td
+    Borders are collapsed into a single border when possible  */
+
+
+}
+
+td {
+
+    border: 2px solid black;;
+}
+
+
+
+#druga {
+
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top:300px;
+    right:10px;
+    
+
+
+}
+
+#prva {
+
+    position: fixed;
+    left: 30px;
+    top: 50px;
+}
+
+#treca {
+
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+}
+
