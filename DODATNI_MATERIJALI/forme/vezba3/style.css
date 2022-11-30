@@ -1,0 +1,70 @@
+
+h1 {
+
+    color: rgb(5, 18, 73);
+    text-align: left;
+    
+}
+
+form {
+
+    width: 30%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+form div label { 
+
+    font-size: 12px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+
+form div input {
+
+    font-size: 25px;
+    border: none;
+    border-bottom: 1px solid rgb(206, 200, 200);
+
+}
+
+.check_text {
+
+    display: inline;
+}
+
+.exp input {
+
+    width: 60px ;
+
+}
+
+form div:nth-child(2) .icon {
+
+    font-family: fontawesome;
+}
+
+div:last-child {
+
+    padding-top: 20px;
+    background-color: yellow;
+    
+}
+
+form div input [type=submit] {
+
+    display: block;
+    padding: 5px;
+}
+
+
+
+
+

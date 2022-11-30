@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <form action="">
+        <h1>Your payment details</h1>
+      <div>
+        <label for="name">NAME</label> 
+      </div>
+
+      <div>
+        <input type="text" name="name" id="name" />
+      </div>
+
+      <div>
+        <label for="card">CARD NUMBER</label>
+      </div>
+
+      <div>
+        <input type="number" placeholder="&#xf09d" class="icon" />
+      </div>
+
+      <div>
+        <label for="exp">EXPIRATION DATE</label>
+      </div>
+      <div class="exp">
+        <input type="number" name="exp" id="m" maxlength="2" placeholder="MM" />
+        <input type="number" name="exp" id="y" maxlength="2" placeholder="YY" />
+       </div>
+      <div>
+        <label for="cvc" >CVC</label>
+      </div>
+      <div>
+        <input type="number" maxlength="3" name="cvc" id="cvc" placeholder="123" />
+      </div>
+      
+      <div>
+        <input type="checkbox" name="save" id="save" value="save my card" checked/>
+        <label for="save" class="check_text">Save my card for future purchases</label>
+      </div>
+      <div>
+        <input type="submit" value="PAY NOW">
+      </div>
+      
+
+    </form>
+  </body>
+</html>
