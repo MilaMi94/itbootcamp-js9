@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#schedule {
+
+    font-family: Arial, Helvetica, sans-serif; 
+    border-collapse: collapse;
+    width: 100%;
+        
+}
+
+#schedule td, #schedule th {
+    border: 1px solid rgb(189, 183, 183);
+    padding: 8px;
+  }
+
+#schedule th {
+
+    text-align: center;
+}
+
+#schedule tr:first-child {
+
+    background-color: rgb(240, 131, 41);
+    color:white;
+    text-align: center;
+    font-size: 25px;
+    font-stretch: ultra-expanded;
+    
+}
+
+#schedule tr:nth-child(even) {
+
+    background-color: rgb(236, 164, 97, 0.3);
+    border: 2px solid orange;
+}
+
+#schedule tr:last-child {
+
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    border-left: grey;
+    border-bottom: grey;
+    border-right: grey;
+
+}
