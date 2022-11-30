@@ -11,6 +11,7 @@ div {
     position: relative;
     top:50px;
     left: 35px;
+    z-index: -1;
     
 }
 
@@ -29,4 +30,10 @@ div {
     top:0;
     left: 0;
     background-color: rgb(235, 215, 107);
+}
+
+div:first-of-type {
+
+    position: relative;
+    z-index: 1;
 }
