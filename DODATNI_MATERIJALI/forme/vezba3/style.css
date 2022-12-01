@@ -1,4 +1,7 @@
+* {
 
+    box-sizing: border-box;
+}
 h1 {
 
     color: rgb(5, 18, 73);
@@ -13,6 +16,7 @@ form {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    
 }
 
 form div label { 
@@ -24,6 +28,7 @@ form div label {
     padding-top: 5px;
     padding-bottom: 5px;
     
+    
 }
 
 
@@ -32,7 +37,8 @@ form div input {
     font-size: 25px;
     border: none;
     border-bottom: 1px solid rgb(206, 200, 200);
-
+    width: 70%;
+        
 }
 
 .check_text {
@@ -46,24 +52,40 @@ form div input {
 
 }
 
-form div:nth-child(2) .icon {
+.icon {
 
-    font-family: fontawesome;
+    font-family: "fontawesome";
+   
+       
 }
+
 
 div:last-child {
 
     padding-top: 20px;
-    background-color: yellow;
+    
     
 }
 
-form div input [type=submit] {
+input[type=submit] {
 
-    display: block;
-    padding: 5px;
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 10px 10px rgb(227, 217, 217);
+
+
 }
 
+input[type="text"]:focus {  
+
+    border-color: dodgerBlue;  
+    box-shadow: 0 0 8px 0 dodgerBlue;  
+  }  
 
 
 
