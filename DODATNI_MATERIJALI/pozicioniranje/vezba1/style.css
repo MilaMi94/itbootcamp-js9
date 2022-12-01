@@ -1,0 +1,60 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#container {
+    
+    border: 2px solid black;
+    width: 200px;
+    position: fixed;
+    left:100px;
+    top: 50px;
+    /* overflow: hidden; */
+
+}
+
+#container span {
+
+    color: red;
+
+}
+
+#container img {
+
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px dotted red;
+    height: 200px;
+
+}
+
+#container h2 {
+
+    color: blue;
+}
+
+#container div:nth-child(3) {
+
+    overflow: scroll;
+    height: 150px;
+}
+
+#container div {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+
+
+
+
+
+

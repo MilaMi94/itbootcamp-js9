@@ -1,0 +1,58 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+
+    background-color: rgb(69, 216, 167);
+    position: fixed;
+    width:300px;
+    top: 50px;
+    left: 50px;
+   
+
+}
+
+
+input, textarea {
+
+    width: 100%;
+    border-radius: 0%;
+    padding: 7px 0px 7px 5px;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: grey;
+    border: 1px solid grey;
+
+}
+
+form h4 {
+
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#prvi_div  {
+
+    background-image: url("cloud.jpg");
+    
+
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
