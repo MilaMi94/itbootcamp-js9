@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.prvi_span {
+  font-weight: 900;
+}
+
+.drugi_span {
+  font-weight: 100;
+}
+
+/*Horizontalni meni*/
+
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topbar ul {
+  overflow: hidden;
+  list-style: none;
+  width: 100%;
+}
+
+.topbar ul li {
+  background-color: rgb(7, 7, 80);
+  float: left;
+  border: none;
+  font-size: 16px;
+}
+
+.topbar ul .left {
+  width: 20%;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.topbar ul .center {
+  width: 8%;
+  text-align: center;
+  background-color: black;
+  font-size: 18px;
+}
+
+.topbar ul .uloguj {
+  width: 22%;
+  text-align: right;
+ 
+}
+
+.topbar ul .registruj {
+  width: 10%;
+  text-align: right;
+  padding-right: 10px;
+ 
+}
+
+.topbar ul .uloguj a, .topbar ul .registruj a{
+
+  padding-top: 12px ;
+  padding-bottom: 11px ;
+}
+
+.topbar a {
+
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+
+}
+
+.submenu {
+  display: none;
+}
+
+li:nth-child(7):hover .submenu {
+
+  display:block;
+  background-color: blue;
+
+}
+

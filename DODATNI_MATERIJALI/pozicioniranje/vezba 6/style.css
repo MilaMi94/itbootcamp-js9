@@ -1,0 +1,35 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#p1 {
+
+    position: static;
+}
+
+#p2 {
+
+    position: relative;
+    left: 100px;
+    top: 100px; /* ovde sam dodalaa ovo da se tekst ne bi preklapao */
+}
+
+#p3 {
+
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    
+}
+
+#p4 {
+
+    position: fixed;
+    right: 5px;
+    top: 30px;
+
+
+}
