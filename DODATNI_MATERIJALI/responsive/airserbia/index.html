@@ -5,9 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
+    <div class="row">
+        <header class="col-12">
+            <h2>Air SERBIA</h2>
+        </header>
+    </div>
+    <div class="row">
+        <nav>
+            <ul>
+                <li class="col-2"><a href="#home"><img src="airserbia.png" alt="airserbia"></a></li>
+                <li class="col-1"><a href="#letovi">Letovi</a></li>
+                <li class="col-1"><a href="#destinacije">Destinacije</a></li>
+                <li class="col-1"><a href="#informacije">Informacije</a></li>
+                <li class="col-1"><a href="#kontakt">Kontakt</a></li>
+                <li class="col-6"></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Letovi</h4>
+            <img class="slike" src="letovi.jpg" alt="letovi">
+        </div>
+        <div class="col-8">
+            <h4>Destinacije</h4>
+            <img class="slike" src="destinacije.jpg"  alt="destinacije">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            &nbsp;
+        </div>
+        <div class="col-8">
+            <ul>
+                <li>Evropa</li>
+                <li>Azija</li>
+                <li>Afrika</li>
+                <li>Amerika</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h4>Informacije</h4>
+            <img class="slike" src="informacije.jpg" alt="info">
+        </div>
+
+        <form class="col-8" action="">
+           <h4>Kontakt</h4>
+           <label for="email">Email:</label><br>
+           <input type="email" name="email" id="mail" placeholder="Unesi email"><br>
+           <label for="poruka">Tekst poruke:</label><br>
+           <textarea name="poruka" id="por" cols="30" rows="10"></textarea><br>
+           <input type="checkbox" name="uslovi" value="prihvatite uslove koriscenja" id="uslovi">
+           <label for="uslovi">prihvatite uslove koriscenja</label><br>
+            <input type="submit" value="Posaljite">
+        </form>
+    </div>
+
+    
 
     
 

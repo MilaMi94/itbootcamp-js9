@@ -1,74 +1,167 @@
-/*Za mobile*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@media only screen and (max-width:1000px) {
+.row {
+  width: 100%;
+  overflow: hidden;
+}
 
-    [class*="col-"] {
+header {
+  background-color: white;
+  text-align: center;
+  color: rgb(9, 115, 202);
+}
 
-        width: 100%;
-    }
+nav {
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  background-color: rgb(9, 115, 202);
+  
+
+  /* ovo bi trebalo da stavljam u a tag, ali posto ovde nisu dugmeta onda msm da nije potrebno */
+}
+
+nav ul {
+  overflow: hidden;
+  width: 100%;
+  list-style: none;
+  
+}
+
+nav ul li {
+  float: left;
+  background-color: rgb(9, 115, 202);
+  width: 20%;
+  text-align: left;
+}
+
+nav ul li a img {
+  width: 50%;
+  padding-right: 10px;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
 
 }
 
+.slike {
+  width: 200px;
+  padding-top: 5px;
+} /*vrati se ovde */
 
+.row:nth-child(3) {
+  margin-top: 50px;
+}
 
+.row:nth-child(4) ul {
+  list-style: none;
+}
+
+.row:nth-child(4) ul li {
+  background-color: rgb(211, 208, 208);
+  padding: 5px 0px 5px 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 150px;
+  border-radius: 5px;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border-color: rgb(185, 175, 175);
+}
+
+form {
+  padding-right: 150px;
+}
+
+h4 {
+  padding-left: 10px;
+}
+
+.row:nth-child(3),
+.row:nth-child(5) {
+  padding-left: 10px;
+}
+
+.row:nth-child(5) {
+  padding-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: rgb(9, 115, 202);
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  border: none;
+}
+
+/*Za mobile*/
+
+@media only screen and (max-width: 1000px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  nav ul li {
+    border-top: 1px solid white;
+  }
+}
 
 /* Za desktop */
 
-@media only screen and (min-width:1001px) {
+@media only screen and (min-width: 1001px) {
+  [class*="col-"] {
+    float: left;
+  }
 
-    [class*="col-"] {
-        float: left;
+  .col-1 {
+    width: 8.33%;
+  }
 
-
-    }
-
-    .col-1 {
-        width:8.33%;
-    }
-
-    .col-2 {
-
-        width: 16.66%;
-    }
-    .col-3 {
-
-        width: 25%;
-    }
-    .col-4 {
-
-        width: 33.33%;
-    }
-    .col-5 {
-
-        width: 41.66%;
-    }
-    .col-6 {
-
-        width: 50%;
-    }
-    .col-7 {
-
-        width: 58.33%;
-    }
-    .col-8 {
-
-        width: 66.66%;
-    }
-    .col-9 {
-
-        width: 75%;
-    }
-    .col-10 {
-
-        width: 83.33%;
-    }
-    .col-11 {
-
-        width: 91.66%;
-    }
-    .col-12 {
-
-        width: 100%;
-    }
-
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
 }
