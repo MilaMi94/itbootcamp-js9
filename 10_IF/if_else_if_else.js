@@ -139,10 +139,10 @@ if (b3 < mini) {
   mini = b3;
 }
 
-document.write(`<p>Minimum je ${mini}`);
+document.write(`<p>Minimum je ${mini}</p>`);
 
 // Odredjivanje srednjeg broja 
 
 let sr = b1 + b2 + b3 - maks - mini;
 
-document.write(`<p>Srednji broj je ${sr}`);
+document.write(`<p>Srednji broj je ${sr}</p>`);
