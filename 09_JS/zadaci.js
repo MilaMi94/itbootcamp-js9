@@ -21,6 +21,16 @@ let min = minOdPonoci % 60;
 console.log(min);
 let sati = Math.floor(minOdPonoci / 60);
 console.log(sati + ":" + min);
+
+//  3. zadatak
+
+let ukupnaCenaRobe = 1399;
+let novcanica = 2000;
+
+let kusur = novcanica - ukupnaCenaRobe;
+console.log(kusur);
+
+
  
 //  4.zadatak
 
@@ -32,3 +42,29 @@ let h = datum.getHours();
 let m = datum.detMinutes();
 console.log( h + ":" + m);
 console.log( h + 60 + m);
+
+
+//   5.zadatak
+
+let dat = new Date();
+
+let dan = dat.getDate();
+let mes =  dat.getMonth()+1;
+let year = dat.getFullYear;
+
+console.log(dan + "/" + mes + "/" + year);
+
+
+
+// 6.zadatak
+
+let vrednostKursa = 117.6;
+let ukupanBrojEvra = 558;
+
+let nakonRazmene = ukupanBrojEvra * vrednostKursa;
+
+console.log(nakonRazmene);
+
+
+
+
