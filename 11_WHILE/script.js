@@ -2,10 +2,9 @@
 
 let i = 1;
 
-while(i <= 5) {
-    console.log("zdravo");
-    i++;
-    
+while (i <= 5) {
+  console.log("zdravo");
+  i++;
 }
 console.log("Poruka nakon while petlje");
 console.log(`Vrednost promenljive i nakon while petlje je ${i}`);
@@ -23,10 +22,8 @@ While -> Blok naredbi se izvrsava 0 puta ako je uslov netacan, ili do beskonacno
 
 i = 1;
 
-while(i <= 5) {
-    console.log(i);
-    i++;
-
+while (i <= 5) {
+  console.log(i);
+  i++;
 }
-
 
