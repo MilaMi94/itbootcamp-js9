@@ -120,23 +120,43 @@ while(i < k) {
 }
 ;/* 12.  Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv samo sa jedan i sa samim sobom.*/
 
-// let number = 21;
-// i = 2;
-// prostBroj = true;
+let number = 2;
+i = 1;
+let prostBroj = true;
 
-// while (i < number) {
-//   if (number % i == 0) {
-//     prostBroj = false;
-//     break;
-//   }
+while (i < number) {
+  if (number % i == 0 && i > 1 && number != 2) {
+    prostBroj = false;
+    break;
+  }
+  i = i + 1;
+}
 
-//   i = i++;
-// }
+if (prostBroj == false) {
+  document.write(`<p>${number} nije prost broj.</p>`);
+} else if (number == 1) {
+  document.write(`<p>${number} nije ni prost ni slozen broj.</p>`);
+} else {
+  document.write(`<p>${number} je prost broj.</p>`);
+}
 
-// if (number == 2 || prostBroj == true) {
-//   document.write(`<p>${number} je prost broj.</p>`);
-// } else {
-//   document.write(`<p>${number} nije prost broj.</p>`);
-// }
 
-// provera da li je broj veci od 1
+ ;
+i = 2;
+prostBroj = true;
+
+while (i <= Math.sqrt(number) ) {
+  if (number%i ==0) {
+    prostBroj = false;
+    break;
+  }
+  i = i + 1;
+}
+
+if (prostBroj == false) {
+  document.write(`<p>${number} nije prost broj.</p>`);
+} else if (number == 1) {
+  document.write(`<p>${number} nije ni prost ni slozen broj.</p>`);
+} else {
+  document.write(`<p>${number} je prost broj.</p>`);
+}

@@ -194,7 +194,7 @@ console.log(
 
 //Odrediti sa koliko brojeva je deljiv uneti broj k
 
-k = 24;
+k = 53;
 i = 1;
 let brojDelioca = 0;
 
@@ -206,29 +206,29 @@ while (i <= k) {
 }
 console.log(`Broj delioca broja ${k} jednak je: ${brojDelioca}`);
 
-if(brojDelioca == 2) {
-  console.log("broj je prost")
-}
-else {
-  console.log("broj je slozen")
+if (brojDelioca == 2) {
+  console.log("broj je prost");
+} else {
+  console.log("broj je slozen");
 }
 //Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv samo sa jedan i sa samim sobom.
 
-let number = 21;
-i = 2;
+let number = 54;
+i = 1;
 prostBroj = true;
 
 while (i < number) {
-  if (number % i == 0) {
+  if (number % i == 0 && i > 1 && number != 2) {
     prostBroj = false;
     break;
   }
-
-  i = i++;
+  i = i + 1;
 }
 
-if (number == 2 || prostBroj == true) {
-  document.write(`<p>${number} je prost broj.</p>`);
-} else {
+if (prostBroj == false) {
   document.write(`<p>${number} nije prost broj.</p>`);
+} else if (number == 1) {
+  document.write(`<p>${number} nije ni prost ni slozen broj.</p>`);
+} else {
+  document.write(`<p>${number} je prost broj.</p>`);
 }
