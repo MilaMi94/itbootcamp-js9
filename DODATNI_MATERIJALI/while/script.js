@@ -120,16 +120,16 @@ while(i < k) {
 }
 ;/* 12.  Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv samo sa jedan i sa samim sobom.*/
 
-let number = 2;
-i = 1;
+let number = 11;
+i = 2;
 let prostBroj = true;
 
 while (i < number) {
-  if (number % i == 0 && i > 1 && number != 2) {
+  if (number % i == 0) {
     prostBroj = false;
     break;
   }
-  i = i + 1;
+  i += 1;
 }
 
 if (prostBroj == false) {
@@ -138,10 +138,9 @@ if (prostBroj == false) {
   document.write(`<p>${number} nije ni prost ni slozen broj.</p>`);
 } else {
   document.write(`<p>${number} je prost broj.</p>`);
-}
+};
 
 
- ;
 i = 2;
 prostBroj = true;
 
