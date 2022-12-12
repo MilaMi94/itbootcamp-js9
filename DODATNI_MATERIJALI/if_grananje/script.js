@@ -2,7 +2,7 @@
 dobro jutro za vreme manje od 12 sati ujutru, 
 dobar dan za vreme manje od 18 sati,
 u ostalim slučajevima ispisati dobro veče.*/
-
+console.log("Zadatak-------------------------------------------pocetak");
 const d = new Date();
 const hour = d.getHours();
 
@@ -13,10 +13,12 @@ if (hour < 12) {
 } else {
   console.log("Dobro vece");
 }
-
+console.log("-----------------------------------------------------kraj");
 /* Zadatak 15.  Za uneti broj ispitati da li je on manji od nule, veći od nule ili jednak nuli. 
 Ukoliko je manji ili jednak nuli ispisati njegov prethodnik, a ukoliko je veći od nule ispisati njegov sledbenik. */
-
+console.log(
+  "Zadatak 15-----------------------------------------------------pocetak"
+);
 let broj = 1;
 
 if (broj > 0) {
@@ -24,9 +26,11 @@ if (broj > 0) {
 } else {
   console.log(`Predhodnik ${broj--}`);
 }
-
+console.log("-----------------------------------------------------kraj");
 /* Zadatak 17. Za učitani broj ispitati da li je ceo. */
-
+console.log(
+  "Zadatak 17-----------------------------------------------------pocetak"
+);
 let ceoBroj = 23;
 
 if (ceoBroj % 1 != 0) {
@@ -37,16 +41,23 @@ if (ceoBroj % 1 != 0) {
 
 // drugi nacin
 
-if (Number.isInteger(ceoBroj)) { // sama po sebi ce metoda vratiti tacno
+if (Number.isInteger(ceoBroj)) {
+  // sama po sebi ce metoda vratiti tacno
   console.log("Broj ceo");
 } else {
   console.log("Broj nije ceo");
 }
+
+console.log("-----------------------------------------------------kraj");
 //---------------------------------------------------------------------------------------------------------------------------------
-//IF-Zadaci za vezbu word dokument 
+
+//------------------------------------------------------------------------------------------------------------------------------------
+//IF-Zadaci za vezbu word dokument
 
 //1.  Za dva uneta broja ispisati koji je veći a koji je manji.
-
+console.log(
+  "Zadatak 1-----------------------------------------------------pocetak]"
+);
 let br1 = 5;
 let br2 = 56;
 
@@ -56,56 +67,65 @@ if (br1 > br2) {
   console.log(`${br2} je veci`);
 }
 
-
+console.log(
+  "------------------------------------------------------------------------kraj"
+);
 /*2.  Ispitati da li je uneta temperatura u plusu ili je u minusu. Ukoliko je temperatura nula, računati da je u plusu.*/
-
+console.log(
+  "Zadatak 2-----------------------------------------------------pocetak"
+);
 let temp = 25;
 if (temp >= 0) {
-  console.log(`Uneta temperatura ${temp} je u plusu. `)
+  console.log(`Uneta temperatura ${temp} je u plusu. `);
 } else {
-  console.log(`Uneta temperatura ${temp} je u minusu. `)
+  console.log(`Uneta temperatura ${temp} je u minusu. `);
 }
-
+console.log(
+  "-----------------------------------------------------------------------kraj"
+);
 /*3.  U odnosu na pol (muški/ženski) koji je korisnik uneo prikazati odgovarajući avatar. */
 
 let pol = "w";
 if (pol == "m") {
-  document.write("<img src='https://cdn-icons-png.flaticon.com/512/0/93.png'>")
+  document.write("<img src='https://cdn-icons-png.flaticon.com/512/0/93.png'>");
 } else {
-  document.write("<img src='https://static.vecteezy.com/system/resources/thumbnails/004/899/680/small/beautiful-blonde-woman-with-makeup-avatar-for-a-beauty-salon-illustration-in-the-cartoon-style-vector.jpg'>")
+  document.write(
+    "<img src='https://static.vecteezy.com/system/resources/thumbnails/004/899/680/small/beautiful-blonde-woman-with-makeup-avatar-for-a-beauty-salon-illustration-in-the-cartoon-style-vector.jpg'>"
+  );
 }
-
 
 /*4.  U odnosu na preuzete vrednosti AM i PM sa svog računara, ispisati da li je trenutno jutro ili popodne.*/
 
-
-
-
 if (hour < 12) {
-  document.write("<p>Jutro je</p>")
+  document.write("<p>Jutro je</p>");
 } else if (hour < 18) {
-  document.write("<p>Popodne je</p>")
+  document.write("<p>Popodne je</p>");
 } else {
-  document.write("<p>Vece je</p>")
+  document.write("<p>Vece je</p>");
 }
 
-
-
-
 // 5.  Za preuzetu godinu sa računara i unetu godinu rođenja izračunati da li je osoba punoletna ili maloletna.
-
+console.log(
+  "Zadatak 5-----------------------------------------------------pocetak"
+);
 let y = d.getFullYear();
 console.log(y);
 let y1 = 1994;
 
-if ((y - y1) >= 18) {
+if (y - y1 >= 18) {
   console.log("Osoba je punoletna");
 } else {
   console.log("Osoba je maloletna");
 }
 
-
+console.log(
+  "---------------------------------------------------------------------kraj"
+);
 //6.  Odrediti najveći od tri uneta broja
+
+console.log(
+  "Zadatak 6-----------------------------------------------------pocetak"
+);
 y = 1278;
 y1 = 358;
 let x = 358;
@@ -116,7 +136,9 @@ if (y > y1 && y > x) {
 } else {
   console.log(`${x} je najveci broj`);
 }
-
+console.log(
+  "-------------------------------------------------------------------kraj"
+);
 
 /*
 7.  Na osnovu unetog broja poena ispitati koju ocenu profesor treba da upiše učeniku. Učenik je položio ispit ukoliko ima više od 50 poena, u suprotnom je pao ispit.
@@ -125,7 +147,9 @@ za više od 60 poena učenik dobija ocenu 7,
 za više od 70 poena učenik dobija ocenu 8,
 za više od 80 poena učenik dobija ocenu 9 i
 za više od 90 poena učenik dobija ocenu 10.*/
-
+console.log(
+  "Zadatak 7-----------------------------------------------------pocetak"
+);
 let poeni = 91;
 if (poeni < 50) {
   console.log("Student je pao ispit");
@@ -134,35 +158,42 @@ if (poeni < 50) {
 } else if (poeni < 70) {
   console.log("Student je polozio ispit sa ocenom 7");
 } else if (poeni < 80) {
-  onsole.log("Student je polozio ispit sa ocenom 8");
+  console.log("Student je polozio ispit sa ocenom 8");
 } else if (poeni < 90) {
-  onsole.log("Student je polozio ispit sa ocenom 9");
+  console.log("Student je polozio ispit sa ocenom 9");
 } else {
   console.log("Student je polozio ispit sa ocenom 10");
 }
 
-
+console.log(
+  "----------------------------------------------------------------kraj"
+);
 //8.  Preuzeti koji je dan u nedelji sa računara i ispitati da li je to radni dan ili je u pitanju vikend.
-
+console.log(
+  "Zadatak 8-----------------------------------------------------pocetak"
+);
 let dan = d.getDay();
 
 console.log(dan);
 
 if (dan == 0 || dan == 6) {
-  console.log("Sada je vikend")
+  console.log("Sada je vikend");
 } else {
-  console.log("Sada je radni dan")
+  console.log("Sada je radni dan");
 }
 
-
+console.log(
+  "----------------------------------------------------------------kraj"
+);
 
 //9.  Za vreme preuzeto sa računara ispisati dobro jutro za vreme manje od 12 sati ujutru, dobar dan za vreme manje od 18 sati popodne i u ostalim  slučajevima ispisati dobro veče.
 
 ///////////////ovo slicno sam odradila gore ///////////////////////////////////
 
-
 //10.  Uporediti dva uneta datuma i ispisati koji od njih je raniji.
-
+console.log(
+  "Zadatak 10-----------------------------------------------------pocetak"
+);
 let d1 = 25;
 let d2 = 12;
 let m1 = 12;
@@ -180,37 +211,34 @@ if (g1 < g2) {
     console.log(`Raniji je datum ${d1}.${m1}.${g1}`);
   } else if (m2 < m1) {
     console.log(`Raniji je datum ${d2}.${m2}.${g2}`);
-  } else { // Ovo obuhvata one slucajeve kad su meseci isti
+  } else {
+    // Ovo obuhvata one slucajeve kad su meseci isti
     if (d1 < d2) {
       console.log(`Raniji je datum ${d1}.${m1}.${g1}`);
-
-    }
-    else if (d2 < d1) {
+    } else if (d2 < d1) {
       console.log(`Raniji je datum ${d2}.${m2}.${g2}`);
     } else {
       console.log("Datumi su isti ");
     }
   }
-
-
 }
 
-
+console.log(
+  "--------------------------------------------------------------------kraj"
+);
 //11.  Radno vreme jedne programerske firme je od 9h do 17h. Preuzeti vreme sa računara i ispitati da li u to vreme firma radi ili ne radi.
-
 
 ///////////////////////////////////////////      ovo isto lako opet za vreme      /////////////////////////////////////////////////////
 
-
-
 //12.  Za unet početak i kraj radnog vremena dva lekara ispisati DA ukoliko se njihove smene preklapaju, u suprotnom ispisati NE.
+
 console.log("Zadatak 12 ------------pocetak");
 let p1 = 8;
 let k1 = 16;
 let p2 = 16;
 let k2 = 20;
 
-if( k1 <= p2  ||  k2 <= p1) {
+if (k1 <= p2 || k2 <= p1) {
   console.log("Ne poklapaju se");
 } else {
   console.log(" Poklapaju se");
@@ -218,9 +246,10 @@ if( k1 <= p2  ||  k2 <= p1) {
 console.log("Zadatak 12 ------------ kraj");
 //////////////////////////////////////        ovo mi je mnogo konfuzan zadatak      ///////////////////////////////////////////////////
 
-
 //13.  Za uneti broj ispitati da li je paran ili nije.
-
+console.log(
+  "Zadatak 13-----------------------------------------------------pocetak"
+);
 broj = 14;
 
 if (broj % 2 == 0) {
@@ -229,19 +258,20 @@ if (broj % 2 == 0) {
   console.log("Broj je neparan");
 }
 
-
+console.log("-----------------------------------------------------kraj");
 //14.  Za uneti broj ispisati da li je deljiv sa 3 ili ne.
 
-
+console.log(
+  "Zadatak 14-----------------------------------------------------pocetak"
+);
 if (broj % 3 == 0) {
   console.log("Broj je deljiv sa 3");
 } else {
   console.log("Broj nije deljiv sa 3");
 }
-
+console.log("-----------------------------------------------------kraj");
 
 //15.  Za dva uneta broja, od većeg učitanog broja oduzeti manji i rezultat ispisati na ekranu.
-
 
 let broj1 = 25;
 let broj2 = 12;
@@ -265,8 +295,10 @@ if (broj <= 0) {
 
 document.write("<br>");
 
-//17.  Za tri uneta broja ispisati koji od njih ne najveći, koji od njih je srednji, a koji od nih je najmanji. 
-
+//17.  Za tri uneta broja ispisati koji od njih ne najveći, koji od njih je srednji, a koji od nih je najmanji.
+console.log(
+  "Zadatak 17-----------------------------------------------------pocetak"
+);
 broj = 13;
 broj1 = 90;
 broj2 = 79;
@@ -276,7 +308,6 @@ if (broj > broj1 && broj > broj2) {
   if (broj1 > broj2) {
     console.log(`${broj1} je srednji`);
     console.log(`${broj2} je najmanji`);
-
   } else {
     console.log(`${broj2} je srednji`);
     console.log(`${broj1} je najmanji`);
@@ -290,7 +321,6 @@ if (broj > broj1 && broj > broj2) {
     console.log(`${broj2} je srednji`);
     console.log(`${broj1} je najmanji`);
   }
-
 } else {
   console.log(`${broj2} je najveci`);
   if (broj > broj1) {
@@ -301,11 +331,15 @@ if (broj > broj1 && broj > broj2) {
     console.log(`${broj} je najmanji`);
   }
 }
-
+console.log(
+  "--------------------------------------------------------------------kraj"
+);
 
 //18.  Za učitani broj ispitati da li je ceo.
 
-
+console.log(
+  "Zadatak 18-----------------------------------------------------pocetak"
+);
 ceoBroj = 23.5;
 if (ceoBroj % 1 != 0) {
   console.log("Broj nije ceo");
@@ -313,9 +347,14 @@ if (ceoBroj % 1 != 0) {
   console.log("Broj je ceo");
 }
 
+console.log(
+  "---------------------------------------------------------------kraj"
+);
 
-
-//19.  Učitati dva cela broja i ispitati da li je veći od njih paran. 
+//19.  Učitati dva cela broja i ispitati da li je veći od njih paran.
+console.log(
+  "Zadatak 19-----------------------------------------------------pocetak"
+);
 
 broj1 = 55;
 broj2 = 55;
@@ -333,13 +372,14 @@ if (broj1 > broj2) {
     console.log(`${broj2} je veci i neparan`);
   }
 } else {
-  if (broj1 % 2 == 0)
-    console.log(`Brojevi su isti i parni`);
+  if (broj1 % 2 == 0) console.log(`Brojevi su isti i parni`);
   else {
     console.log(`Brojevi su isti i neparni`);
   }
 }
-
+console.log(
+  "----------------------------------------------------------------kraj"
+);
 
 //20. Naći koji je najveći od tri uneta broja $a, $b i $c.
 
@@ -355,7 +395,10 @@ if (temp < -15 || temp > 40) {
 
 //22. Ispitati da li je godina prestupna. (Godinu preuzeti sa vremena na Vašem računaru). Prestupna je ona godina koja je deljiva sa 4, ako nije deljiva sa 100, mada ipak jeste deljiva sa 400.
 
-///////////////ovo je lako /////////////////
+console.log(
+  "Zadatak 22-----------------------------------------------------pocetak"
+);
+
 let year = 2016;
 if (year % 4 == 0 && year % 100 != 0 && year % 400 == 0) {
   console.log("Godina je prestupna");
@@ -363,22 +406,31 @@ if (year % 4 == 0 && year % 100 != 0 && year % 400 == 0) {
   console.log("Godina nije prestupna");
 }
 
+console.log(
+  "---------------------------------------------------------------kraj"
+);
+
 //23.  Jedan butik ima radno vreme od 9h do 20h radnim danima, a vikendom od 10h do 18h. Preuzeti dan i vreme sa računara i ispitati da li je butik trenutno otvoren.
 
-
+//////////////////lako/////////////////////////////
 
 //24.  Napisati program koji za uneta četiri prirodna broja a,b,c,d određuje koliko njih je deljivo sa 2, koliko sa 5, a koliko sa 2 i 5 i štampa odgovarajuće poruke.
 
+console.log(
+  "Zadatak 24-----------------------------------------------------pocetak"
+);
+let a = 30;
+let b = 30;
+let c = 286;
+let z = 233;
 
+
+
+
+console.log(
+  "kraj------------------------------------------------------------------pocetak"
+);
 
 //25.  Za tri učitana broja x, y, z ispitati da li je jedan od njih jednak sumi druga dva.
 
-
-
 //26. Napisati program koji za uneta tri realna broja određuje zbir dva najveća.
-
-
-
-
-
-

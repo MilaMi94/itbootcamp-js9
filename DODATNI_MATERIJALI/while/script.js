@@ -17,7 +17,7 @@ while (i <= 20) {
   document.write("<br>");
   i++;
 }
-
+//------------------------------------------------------------------------------------------
 /* 2. Ispisati brojeve od 20 do 1.  */
 
 i = 20;
@@ -28,6 +28,8 @@ while (i >= 1) {
 }
 
 document.write("<br>");
+
+//--------------------------------------------------------------------------------------------
 
 /* 3. Ispisati parne brojeve od 1 do 20. */
 
@@ -40,6 +42,7 @@ while (i <= 20) {
   i++;
 }
 
+//------------------------------------------------------------------------------------------------
 /* 4. Kreirati n paragrafa sa proizvoljnim tekstom i naizmenično ih obojiti u tri različite boje */
 i = 1;
 let n = 10;
@@ -48,7 +51,7 @@ while (i <= n) {
   document.write("<p style=color:'blue';>aflshfsfj</p>");
   i++;
 }
-
+//-------------------------------------------------------------------------------------------------
 /* 5. Kreirati n proizvoljnih slika i staviti im naizmenično dva različita okvira */
 i = 1;
 n = 6;
@@ -62,6 +65,7 @@ while (i <= n) {
 }
 
 document.write("<br>");
+//-------------------------------------------------------------------------------------------------
 /* 6. Odrediti sumu brojeva od 1 do 100 */
 i = 1;
 let zbir = 0;
@@ -74,6 +78,7 @@ while (i <= 100) {
 document.write(zbir);
 
 document.write("<br>");
+//--------------------------------------------------------------------------------------------------
 
 /* 7.  Odrediti sumu brojeva od 1 do n */
 
@@ -105,6 +110,8 @@ while (i <= m) {
 
 document.write(`${zbir}`);
 
+//-------------------------------------------------------------------------------------------------------------------------
+
 /* 11. Odrediti sa koliko brojeva je deljiv uneti broj k  */
 
 let k = 5;
@@ -118,44 +125,46 @@ while(i < k) {
 
   i++;
 }
-;/* 12.  Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv samo sa jedan i sa samim sobom.*/
 
-let number = 11;
+//--------------------------------------------------------------------------------------------------------------------------
+/* 12.  Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv samo sa jedan i sa samim sobom.*/
+
+n = 13;
 i = 2;
 let prostBroj = true;
 
-while (i < number) {
-  if (number % i == 0) {
+while (i < n / 2 ) { // kao bolje je za optimizaciju kad je n/2
+  if (n % i == 0) {
     prostBroj = false;
-    break;
+    break;    // ovde stavljamo break da bi pekinulo petlju
   }
-  i += 1;
+  i++;
 }
 
 if (prostBroj == false) {
-  document.write(`<p>${number} nije prost broj.</p>`);
-} else if (number == 1) {
-  document.write(`<p>${number} nije ni prost ni slozen broj.</p>`);
+  document.write(`<p>${n} nije prost broj.</p>`);
+} else if (n == 1) {  
+  document.write(`<p>${n} nije ni prost ni slozen broj.</p>`);
 } else {
-  document.write(`<p>${number} je prost broj.</p>`);
-};
-
-
-i = 2;
-prostBroj = true;
-
-while (i <= Math.sqrt(number) ) {
-  if (number%i ==0) {
-    prostBroj = false;
-    break;
-  }
-  i = i + 1;
+  document.write(`<p>${n} je prost broj.</p>`);
 }
 
-if (prostBroj == false) {
-  document.write(`<p>${number} nije prost broj.</p>`);
-} else if (number == 1) {
-  document.write(`<p>${number} nije ni prost ni slozen broj.</p>`);
-} else {
-  document.write(`<p>${number} je prost broj.</p>`);
-}
+//----------------------------------------------------------------------------------------------------------------------------
+// i = 2;
+// prostBroj = true;
+
+// while (i <= Math.sqrt(number) ) {
+//   if (number%i ==0) {
+//     prostBroj = false;
+//     break;
+//   }
+//   i = i + 1;
+// }
+
+// if (prostBroj == false) {
+//   document.write(`<p>${number} nije prost broj.</p>`);
+// } else if (number == 1) {
+//   document.write(`<p>${number} nije ni prost ni slozen broj.</p>`);
+// } else {
+//   document.write(`<p>${number} je prost broj.</p>`);
+// }
