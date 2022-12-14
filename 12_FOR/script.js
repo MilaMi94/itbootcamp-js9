@@ -351,13 +351,12 @@ document.write(lista);
 //22.  Kreirati 64 span elemenata i rasporediti ih kao na slici desno, koristeći for petlju. *
 console.log("Zadatak 22------------------------------------------------------");
 
-// for (i = 1; i <= 64; i++) {
-
-//   document.write(`<span class='kvadrat'>${i}</span>`);
-//   if (i % 8 == 0) {
-//     document.write("<br>");
-//   }
-// }
+for (i = 1; i <= 64; i++) {
+  document.write(`<span class='kvadrat'>${i}</span>`);
+  if (i % 8 == 0) {
+    document.write("<br>");
+  }
+}
 
 //23. Kreirati 64 span elemenata i rasporediti ih kao na slici desno, tako da elementi izgledaju kao polja šahovske table. U realizaciji ovog zadatka koristiti for petlju.
 console.log("Zadatak 23------------------------------------------------------");
@@ -393,21 +392,21 @@ for (i = 1; i <= 64; i++) {
 span += `</div>`;
 document.write(span);
 
- span = `<div>`;
- let broj = 1;
- for (i = 1; i <= 8; i++) {
-   for (x = 1; x <= 8; x++) {
-     if ((i + x) % 2 == 0) {
-       span += `<span class='kvadrat' style='background-color:white;'>${broj++}</span>`;
-     } else {
-       span += `<span class='kvadrat' style='background-color:black; color:white;'>${broj++}</span>`;
-     }
-   }
-   span += `<br>`;
- }
+// let span = `<div>`;
+// let broj = 1;
+// for (i = 1; i <= 8; i++) {
+//   for (x = 1; x <= 8; x++) {
+//     if ((i + x) % 2 == 0) {
+//       span += `<span class='kvadrat' style='background-color:white;'>${broj++}</span>`;
+//     } else {
+//       span += `<span class='kvadrat' style='background-color:black; color:white;'>${broj++}</span>`;
+//     }
+//   }
+//   span += `<br>`;
+// }
 
- span += `</div>`;
- document.write(span);
+// span += `</div>`;
+// document.write(span);
 
 //objasnjavanje gde da koristimo while a gde for petlju
 //------------------------------------------------------------------------
