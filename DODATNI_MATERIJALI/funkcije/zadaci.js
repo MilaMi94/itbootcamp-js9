@@ -1,0 +1,1 @@
+// Samostalno da odradim zadatke sve sto smo radili na casu

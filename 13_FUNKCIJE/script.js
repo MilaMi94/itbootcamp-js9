@@ -63,10 +63,11 @@ zbirDvaBroja(20, 10);
 
 
 function prikazSlike(slika) {
-    document.write(`<img src=${slika}>`);
+    document.write(`<img src="${slika}">`);
 }
 
-prikazSlike("destinacije.jpg");  /* ovde mora u navodnicima jer je tako u document.write, nije promenljiva */
+prikazSlike("destinacije.jpg");
+  /* ovde mora u navodnicima jer je tako u document.write, nije promenljiva */
 
 
 
