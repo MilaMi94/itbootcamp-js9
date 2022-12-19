@@ -2,6 +2,9 @@
 
 //1. Napisati funkciju pozdrav kojoj se prosleđuje ime i prezime, a funkcija ispisuje pozdrav. Na primer za uneto ime Jelena i prezime Matejić, funkcija ispisuje Zdravo Jelena Matejić.
 
+
+
+
 //odradili
 
 //2.  Napisati funkciju zbir koja računa zbir dva realna broja.Šta bi trebalo izmeniti da bi se dobila razlika, proizvod ili količnik dva broja.
@@ -174,3 +177,4 @@ function najkraceVreme(t, p, n) {
 }
 
 najkraceVreme(25, 20, 30);
+// nisam sigurna
