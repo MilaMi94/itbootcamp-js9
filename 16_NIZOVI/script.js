@@ -148,7 +148,7 @@ console.log("Zadatak 6.----------");
 let brojevi4 = [1, 128, 300, 35, -25, 67];
 let minVred = niz => {
     let min = niz[0];
-    for (let i =0; i<niz.length; i++){
+    for (let i =1; i<niz.length; i++){
         if(niz[i] < min) {
             min = niz[i];
         }
