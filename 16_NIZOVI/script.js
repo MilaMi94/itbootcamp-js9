@@ -32,24 +32,24 @@ for (let i = 0; i < unutrasnjiNiz.length; i++) {
     console.log(unutrasnjiNiz[i]);
 }
 
-for(let i = 0; i<razno[4].length;i++){
+for (let i = 0; i < razno[4].length; i++) {
     console.log(razno[4][i]);
 }
 
 // promena vrednosti unutrasnjeg niza
 
-razno[4][1]=5;
-for(let i = 0; i<razno[4].length;i++){
+razno[4][1] = 5;
+for (let i = 0; i < razno[4].length; i++) {
     console.log(razno[4][i]);
 }
 
 //Uvecanje vrednosti unutrasnjeg reda za po 10%
 
-for(let i =0; i< razno[4].length;i++) {
-    razno[4][i]*=1.1;
+for (let i = 0; i < razno[4].length; i++) {
+    razno[4][i] *= 1.1;
 }// ovde odmah moze console.log domah unutra, ali stavili smo dve odvojene petlje, svejedno je,isto ce da vrati
 
-for(let i = 0; i<razno[4].length;i++){
+for (let i = 0; i < razno[4].length; i++) {
     console.log(razno[4][i]);
 }
 
@@ -58,19 +58,19 @@ for(let i = 0; i<razno[4].length;i++){
 //2. Odrediti zbir elemenata celobrojnog niza.
 console.log("Zadatak 2.----------");
 let brojevi = [8, 4, -2, 0, 1, 0];
-let brojevi2 =[2, 3, 4]
+let brojevi2 = [2, 3, 4]
 let zbir = 0;
-for(let i = 0;i < brojevi.length;i++) {
-    zbir+= brojevi[i];
+for (let i = 0; i < brojevi.length; i++) {
+    zbir += brojevi[i];
 }
 console.log(zbir);
 
 // ako imamo jos neke nizove gde treba da saberemo brojeve opet sve isto moramo da radimo, zato je prakticnije da napisemo funkciju
 
-let sumaElem = niz =>{
+let sumaElem = niz => {
     let zbir = 0;
-    for(let i = 0;i < niz.length;i++) {
-        zbir+= niz[i];
+    for (let i = 0; i < niz.length; i++) {
+        zbir += niz[i];
     }
     return zbir;
 }
@@ -81,10 +81,10 @@ console.log(sumaElem(brojevi2));
 
 //3. Odrediti proizvod elemenata celobrojnog niza.
 console.log("Zadatak 3.----------");
-let proizvodElem = niz =>{
+let proizvodElem = niz => {
     let proizvod = 1;
-    for(let i = 0;i < niz.length;i++) {
-        proizvod*= niz[i];
+    for (let i = 0; i < niz.length; i++) {
+        proizvod *= niz[i];
     }
     return proizvod;
 }
@@ -95,32 +95,32 @@ console.log(proizvodElem(brojevi));// ovde vraca -0 ali to je ispravno
 //4.Odrediti srednju vrednost elemenata celobrojnog niza.
 console.log("Zadatak 4.----------");
 let srednjaVrednost = (niz) => {
-let suma = 0;
-let brojBrojeva = 0;
-for(let i = 0; i < niz.length; i++) {
-    suma += niz[i];
-    brojBrojeva ++;
-}
-return (suma / brojBrojeva);
-//ovde moze da se podeli sa niz.length umesto brojBrojeva
+    let suma = 0;
+    let brojBrojeva = 0;
+    for (let i = 0; i < niz.length; i++) {
+        suma += niz[i];
+        brojBrojeva++;
+    }
+    return (suma / brojBrojeva);
+    //ovde moze da se podeli sa niz.length umesto brojBrojeva
 }
 console.log(srednjaVrednost(brojevi));
 //druga varijanta
-let srVrednost = niz => sumaElem(niz)/niz.length;
+let srVrednost = niz => sumaElem(niz) / niz.length;
 console.log(srVrednost(brojevi));
 
 //4.a Odrediti srednju vrednost parnih elemenata celobrojnog niza.
 
 let srVrednostParnih = (niz) => {
     let zbir = 0;
-    let br = 0; 
-    for(let i = 0; i < niz.length; i++){
-        if(niz[i]%2==0) {
+    let br = 0;
+    for (let i = 0; i < niz.length; i++) {
+        if (niz[i] % 2 == 0) {
             zbir += niz[i];
             br++;
         }
     }
-    return zbir/br;
+    return zbir / br;
 }
 console.log(srVrednostParnih(brojevi));
 
@@ -129,8 +129,8 @@ console.log("Zadatak 5.----------");
 let brojevi3 = [1, 35, -25, 67];
 let maxVred = niz => {
     let max = niz[0];
-    for (let i =1; i< niz.length; i++){
-        if(niz[i] > max) {
+    for (let i = 1; i < niz.length; i++) {
+        if (niz[i] > max) {
             max = niz[i];
         }
     }
@@ -148,8 +148,8 @@ console.log("Zadatak 6.----------");
 let brojevi4 = [1, 128, 300, 35, -25, 67];
 let minVred = niz => {
     let min = niz[0];
-    for (let i =1; i<niz.length; i++){
-        if(niz[i] < min) {
+    for (let i = 1; i < niz.length; i++) {
+        if (niz[i] < min) {
             min = niz[i];
         }
     }
@@ -166,8 +166,8 @@ let brojevi5 = [1, 20, 80, -20]
 let indMaxNiza = niz => {
     let max = maxVred(niz);
     let index = -1;// zato sto nije validna vrednost i onda zato je bolje zbog debaginga
-    for(let i = 0; i < niz.length; i++) {
-        if(max == niz[i]) {
+    for (let i = 0; i < niz.length; i++) {
+        if (max == niz[i]) {
             index = i;
         }
     }
@@ -184,8 +184,8 @@ console.log(indMaxNiza(elementi));
 let indMaxNiza2 = niz => {
     let max = maxVred(niz);
     let index = -1;// zato sto nije validna vrednost i onda zato je bolje zbog debaginga
-    for(let i = 0; i < niz.length; i++) {
-        if(max == niz[i]) {
+    for (let i = 0; i < niz.length; i++) {
+        if (max == niz[i]) {
             index = i;
             break;
         }
@@ -206,10 +206,10 @@ console.log("Zadatak 8.----------");
 let indMinNiza = niz => {
     let min = minVred(niz);
     let index = -1;// zato sto nije validna vrednost i onda zato je bolje zbog debaginga
-    for(let i = 0; i < niz.length; i++) {
-        if(min == niz[i]) {
+    for (let i = 0; i < niz.length; i++) {
+        if (min == niz[i]) {
             index = i;
-            
+
         }
     }
     return index;
@@ -223,13 +223,13 @@ let elementi2 = [1, 2, 3, -2, 5];
 let brojElemVeciOdsrvr = (niz) => {
     let brojBrojeva = 0;
     let sredina = srednjaVrednost(niz);
-    for(let i = 0; i < niz.length; i++) {
-        if( niz[i] > sredina){
+    for (let i = 0; i < niz.length; i++) {
+        if (niz[i] > sredina) {
             brojBrojeva++;
         }
 
     }
-      return brojBrojeva;  
+    return brojBrojeva;
 }
 console.log(srednjaVrednost(elementi2));
 console.log(brojElemVeciOdsrvr(elementi2));
@@ -238,9 +238,9 @@ console.log("Zadatak 10.----------");
 
 let zbirPozitivnihElem = (niz) => {
     let zbir = 0;
-    for( let i = 0; i < niz.length; i++) {
-        if(niz[i] > 0) {
-            zbir+=niz[i];
+    for (let i = 0; i < niz.length; i++) {
+        if (niz[i] > 0) {
+            zbir += niz[i];
         }
     }
     return zbir;
@@ -248,32 +248,32 @@ let zbirPozitivnihElem = (niz) => {
 console.log(zbirPozitivnihElem(elementi2));
 
 
- //11. Odrediti broj parnih elemenata u celobrojnom nizu
- console.log("Zadatak 11.----------");
- let brojParnihElem = niz => {
+//11. Odrediti broj parnih elemenata u celobrojnom nizu
+console.log("Zadatak 11.----------");
+let brojParnihElem = niz => {
 
     let brojElem = 0;
-    for(let i = 0; i < niz.length; i++) {
-        if(niz[i]%2 == 0) {
+    for (let i = 0; i < niz.length; i++) {
+        if (niz[i] % 2 == 0) {
             brojElem++;
         }
     }
     return brojElem;
- }
+}
 
- console.log(brojParnihElem(elementi2));
+console.log(brojParnihElem(elementi2));
 
- //12. Odrediti broj parnih elemenata sa neparnim indeksom.
- console.log("Zadatak 12.----------");
- let paranBrNeparanInd = niz => {
+//12. Odrediti broj parnih elemenata sa neparnim indeksom.
+console.log("Zadatak 12.----------");
+let paranBrNeparanInd = niz => {
     let br = 0;
-    for(let i =0; i < niz.length; i++ ) {
-        if(niz[i]%2 == 0 && i%2 != 0 ){
+    for (let i = 0; i < niz.length; i++) {
+        if (niz[i] % 2 == 0 && i % 2 != 0) {
             br++;
         }
     }
     return br;
- }
+}
 
 // niz = [10, 12, 11, 13, 14, 16]
 let nn = [10, 12, 11, 13, 14, 16];
@@ -290,47 +290,47 @@ console.log(paranBrNeparanInd(nn));
     return br;
  }*/
 
- //13. Izračunati sumu elemenata niza sa parnim indeksom.
- console.log("Zadatak 13.----------");
+//13. Izračunati sumu elemenata niza sa parnim indeksom.
+console.log("Zadatak 13.----------");
 
- let sumaElemParniInd = niz => {
+let sumaElemParniInd = niz => {
     let suma = 0;
-    for(let i = 0; i < niz.length; i+=2) {
-        suma+=niz[i];
+    for (let i = 0; i < niz.length; i += 2) {
+        suma += niz[i];
     }
     return suma;
- }
+}
 // niz = [10, 12, 11, 13, 14, 16] 
 console.log(sumaElemParniInd(nn));
 
 
- //14. Promeniti znak svakom elementu celobrojnog niza.
- console.log("Zadatak 14.----------");
+//14. Promeniti znak svakom elementu celobrojnog niza.
+console.log("Zadatak 14.----------");
 
- let drugiZnak = niz => {
+let drugiZnak = niz => {
     let noviNiz = [];
-    for(let i = 0; i < niz.length; i++) {
+    for (let i = 0; i < niz.length; i++) {
         // noviNiz += -niz[i];
         // noviNiz.push(-niz[i]);
-        noviNiz.push(niz[i]*(-1));
+        noviNiz.push(niz[i] * (-1));
     }
     return noviNiz;
-   
- }
+
+}
 
 nn = [10, 12, 11, -13, 14, 16]
 console.log(drugiZnak(nn));
 
 // drugi pristup 
 
- 
- //15. Promeniti znak svakom neparnom elementu celobrojnog niza sa parnim indeksom.
- console.log("Zadatak 15.----------");
+
+//15. Promeniti znak svakom neparnom elementu celobrojnog niza sa parnim indeksom.
+console.log("Zadatak 15.----------");
 let ZnakNeparniElemParniInd = niz => {
     let noviNiz = [];
-    for(let i = 0; i < niz.length; i+=2) {
-        if(niz[i]%2 != 0) {
-            noviNiz.push(niz[i]*(-1));
+    for (let i = 0; i < niz.length; i += 2) {
+        if (niz[i] % 2 != 0) {
+            noviNiz.push(niz[i] * (-1));
         }
 
     }
@@ -339,20 +339,84 @@ let ZnakNeparniElemParniInd = niz => {
 // niz = [10, 12, 11, 13, 14, 16]
 console.log(ZnakNeparniElemParniInd(nn));
 
- //Dat je niz stavki za kupovinu (članovi niza su stringovi). Prolaskom kroz niz napraviti neuređenu listu i ispisati je u html dokument.
- console.log("Zadatak 16.----------");
+//Dat je niz stavki za kupovinu (članovi niza su stringovi). Prolaskom kroz niz napraviti neuređenu listu i ispisati je u html dokument.
+console.log("Zadatak 16.----------");
 
- //Dat je niz imena košarkaškog tima. Prolaskom kroz niz formirati tabelu u čijim su redovima imena tima, i tabelu ispisati u html dokument.
+//domaci
 
- //Dat je niz stringova čiji su članovi putanje do slika. Prikazati sve sliku u html dokumentu sa putanjama navedenim u nizu.
+//Dat je niz imena košarkaškog tima. Prolaskom kroz niz formirati tabelu u čijim su redovima imena tima, i tabelu ispisati u html dokument.
+console.log("Zadatak 17.----------");
 
- //Ispisati dužinu svakog elementa u nizu stringova. 
+//domaci
 
- //Odrediti element u nizu stringova sa najvećom dužinom.
+//Dat je niz stringova čiji su članovi putanje do slika. Prikazati sve sliku u html dokumentu sa putanjama navedenim u nizu.
+console.log("Zadatak 18.----------");
 
- //Odrediti broj elemenata u nizu stringova čija je dužina veća od prosečne dužine svih stringova u nizu.
+//domaci
 
- //Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a’. 
+//Ispisati dužinu svakog elementa u nizu stringova. 
+console.log("Zadatak 19.----------");
+
+
+
+let elem = ["Mila", "Milos", "-20", "Marko", "235", "0"];
+
+let duzinaElem = niz => {
+    let duzStringa = ``;
+    niz.forEach(el => {
+        duzStringa += el.length + " ";
+
+    });
+    return duzStringa;
+}
+
+console.log(duzinaElem(elem));
+
+//Odrediti element u nizu stringova sa najvećom dužinom.
+
+console.log("Zadatak 20.----------");
+elem = ["Mila", "Milos", "-20", "Marko", "235", "0"];
+
+let najvecaDuzStringa = niz => {
+    let maxlength = niz[0].length;
+    niz.forEach(el => {
+        if (maxlength <= el.length) {
+            maxlength = el.length;
+        }
+
+    });
+
+    // pogledaj sutra nije mi bas najjasnije ali sam na dobrom putu
+
+}
+
+console.log(najvecaDuzStringa(elem));
+
+
+//Odrediti broj elemenata u nizu stringova čija je dužina veća od prosečne dužine svih stringova u nizu.
+console.log("Zadatak 21.----------");
+elem = ["Mila", "Milos", "-20", "Marko", "235", "0"];
+let duzStr = niz => {
+    let brojac = 0;
+    let suma = 0;
+    niz.forEach(el => {
+        suma += el.length;
+    })
+    let prosek = suma / niz.length;
+    niz.forEach(el => {
+        if (el.length > prosek) {
+            brojac++;
+        }
+    })
+    return brojac;
+
+}
+duzStr(elem);
+
+//Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a’. 
+console.log("Zadatak 22.----------");
+elem = ["Mila", "Milos", "-20", "Marko", "235", "0"];
+
 
 // Odrediti broj elemenata u nizu stringova koji počinju na slovo 'a' ili 'A’. 
-  
+console.log("Zadatak 23.----------");
