@@ -71,7 +71,7 @@ let dan = {
   kiša: false,
   sunce: true,
   oblačno: false,
-  temperature: [5, 10, 15],
+  temperature: [5, 15, 10, 15, 10, 14, 15],
   //1.
   prosecnaTemp: function () {
     let suma = 0;
@@ -91,9 +91,39 @@ let dan = {
     });
     return br;
   },
+  //3.
+  brMaksimalnih: function () {
+    let br = 0;
+    let maks = 0;
+    this.temperature.forEach((el) => {
+      if (el >= maks) {
+        maks = el;
+      }
+    });
+
+    this.temperature.forEach((el) => {
+      if (el == maks) {
+        br++;
+      }
+    });
+    return br;
+  },
+  //4.
+  izmedjuTemp: function (t1, t2) {},
+
+  //5
+
+  //6
 };
 
-console.log(dan.prosecnaTemp());
+console.log(dan.prosecnaTemp()); 
 console.log(dan.brNatprosecnih());
+console.log(dan.brMaksimalnih());
 
 // uradi 3,4,5,6 za vezbu
+//1. Određuje i vraća prosečnu temperaturu izmerenu tog dana.
+//2. Prebrojava i vraća koliko merenja je bilo sa natprosečnom temperaturom.
+//3. Prebrojava i vraća koliko merenja je bilo sa maksimalnom temperaturom.
+//4. Prima dva parametra koji predstavljaju dve temperature. Potrebno je da metoda vrati broj merenja u toku dana čija je vrednost između ove dve zadate temperature (ne uključujući te dve vrednosti).
+//5. Vraća true ukoliko je u većini dana temperatura bila iznad proseka. U suprotnom vraća false.
+//6. Za dan se smatra da je leden ukoliko nijedna temperatura izmerena tog dana nije iznosila iznad 0 stepeni. Metod vraća true ukoliko je dan bio leden, u suprotnom metod vraća false.
