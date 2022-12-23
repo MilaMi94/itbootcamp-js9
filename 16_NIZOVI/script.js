@@ -413,10 +413,3 @@ let duzStr = niz => {
 }
 duzStr(elem);
 
-//Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a’. 
-console.log("Zadatak 22.----------");
-elem = ["Mila", "Milos", "-20", "Marko", "235", "0"];
-
-
-// Odrediti broj elemenata u nizu stringova koji počinju na slovo 'a' ili 'A’. 
-console.log("Zadatak 23.----------");
