@@ -30,5 +30,138 @@ Grad “kida” ukoliko je svaki kurs koji se održava u tom gradu uspešan. Fun
 Polaznici na nekom kursu su “pokidali” na završnom testu ako nijedan polaznik nije osvojio manje od 80% na završnom testu. Funkciji se prosleđuje niz kurseva i naziv nekog kursa, a ona ispituje da li su polaznici pokidali na tom kursu (funkcija vraća true ili false).
 
 
+
 Napomena.
 U svim zadacima možete dodati i pomoćne metode u bilo kom objektu, ako vam je potrebno radi lakše implementacije zadatih funkcija.*/
+
+//Moj pristup
+console.log("Zadatak student moj pristup-------------------");
+
+let s1 = {
+  ime: "Mila",
+  prezime: "Bogdanovic",
+  godStudija: 5,
+  ocene: [9, 8, 9, 8], //8.5
+};
+let s2 = {
+  ime: "Milos",
+  prezime: "Ivanovic",
+  godStudija: 2,
+  ocene: [9, 7, 9],
+};
+let s3 = {
+  ime: "Milan",
+  prezime: "Ivanovic",
+  godStudija: 5,
+  ocene: [10, 10, 10, 10, 9], //9.8
+};
+let s4 = {
+  ime: "Maja",
+  prezime: "Bogdanovic",
+  godStudija: 3,
+  ocene: [10, 10, 10, 10, 9], //9.8
+};
+let students = [s1, s2, s3, s4];
+// pocetno slovo
+console.log("pocetno slovo-------------------");
+
+let pocetnoSlovo = (niz, str) => {
+  niz.forEach((s) => {
+    if (s.prezime.startsWith(str)) {
+      console.log(
+        `Student sa pocetnim slovom prezimena ${str} je ${s.ime} ${s.prezime} `
+      );
+    }
+  });
+};
+
+pocetnoSlovo(students, "B"); // treba da ispise imena i prezimena studenta sa tim pocetnim slovom prezimena
+
+// prvi i drugi string
+console.log("prvi i drugi string-------------------");
+
+let prviDrugiString = (niz, st1, st2) => {
+  niz.forEach((s) => {
+    if (s.ime.includes(st1) && s.prezime.includes(st2)) {
+      console.log(` ${s.ime} ${s.prezime} `);
+    }
+  });
+};
+
+prviDrugiString(students, "il", "ic"); // štampa imena i prezimena svih studenata čije ime sadrži prvi string, a prezime sadrži drugi string.
+
+//br studenata na prosledjenoj godini
+console.log("br studenata na prosledjenoj godini-------------------");
+
+let brStNaGodini = (niz, brGod) => {
+  let br = 0;
+  niz.forEach((s) => {
+    if (s.godStudija == brGod) {
+      br++;
+    }
+  });
+  console.log(br);
+};
+
+brStNaGodini(students, 5);
+
+// maks prosek
+console.log("studenti max prosek-------------------");
+let prosek = (niz) => {
+  let sum = 0;
+  niz.forEach((o) => {
+    sum += o;
+  });
+  return sum / niz.length;
+};
+
+let maxProsek = (niz) => {
+  let max = prosek(niz[0].ocene);
+  niz.forEach((s) => {
+    if (prosek(s.ocene) > max) {
+      max = prosek(s.ocene);
+    }
+  });
+  return max;
+};
+console.log(`Maks prosek je ${maxProsek(students)}`);
+
+let sviStudentiMaxProsek = (niz) => {
+  niz.forEach((s) => {
+    if (prosek(s.ocene) == maxProsek(students)) {
+      console.log(
+        `Student sa maksimalnim prosekom ocena je ${s.ime} ${s.prezime}`
+      );
+    }
+  });
+};
+
+sviStudentiMaxProsek(students); // vraca sve najbolje studente
+
+// prosecan student nijedna 6, nijedna 10
+console.log("prosecan student-------------------");
+
+let prosecan = (niz) => {
+  let prosSt = `Prosecni studenti su: `;
+  niz.forEach((s) => {
+    if (!s.ocene.includes(6) && !s.ocene.includes(10)) {
+      prosSt += `${s.ime} ${s.prezime} `;
+    }
+  });
+  return prosSt;
+};
+console.log(prosecan(students));
+
+// esktra student
+console.log("ekstra student-------------------");
+// samo 9 i 10, br 10 bar duplo veci od br 9
+let ekstraStudenti = (niz) => {
+  niz.forEach((s) => {
+    if (!s.ocene.includes(6) && !s.ocene.includes(7) && !s.ocene.includes(8)) {
+      console.log(s.ocene);
+    
+    }
+  });
+};
+
+ekstraStudenti(students);
