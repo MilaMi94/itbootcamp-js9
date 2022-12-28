@@ -326,21 +326,21 @@ let ZnakNeparniElemParniInd = (niz) => {
   return noviNiz;
 };
 
-let znak1 = (niz) => {
-  niz.forEach((e, i) => {
-    if (e % 2 != 0 && i % 2 == 0 && i != 0) {
-      e * -1;
-    } else {
-      e;
-    }
-  });
-  return niz;
-};
+// let znak1 = (niz) => {
+//   niz.forEach((e, i) => {
+//     if (e % 2 != 0 && i % 2 == 0 && i != 0) {
+//       e * -1;
+//     } else {
+//       e;
+//     }
+//   });
+//   return niz;
+// };
 
 // nn = [10, 12, 11, -13, 14, 16]
 let n1 = [1, 3, 7, -8, 6, 6, 5];
 console.log(ZnakNeparniElemParniInd(n1));
-console.log(znak1(n1));
+// console.log(znak1(n1));
 
 //Dat je niz stavki za kupovinu (članovi niza su stringovi). Prolaskom kroz niz napraviti neuređenu listu i ispisati je u html dokument.
 console.log("Zadatak 16.----------");
@@ -377,19 +377,31 @@ console.log(duzinaElem(elem));
 console.log("Zadatak 20.----------");
 elem = ["Mila", "Milos", "-20", "Marko", "235", "0"];
 
-let najvecaDuzStringa = (niz) => {
-  let maxlength = niz[0].length;
-  niz.forEach((el) => {
-    if (maxlength <= el.length) {
-      maxlength = el.length;
+let najvecaduzStr = (niz) => {
+  let maxDuz = -1;
+
+  niz.forEach((e) => {
+    if (maxDuz <= e.length) {
+      maxDuz = e.length;
     }
   });
-
-  // pogledaj sutra nije mi bas najjasnije ali sam na dobrom putu
+  return maxDuz;
 };
 
-console.log(najvecaDuzStringa(elem));
+let sveMaxDuz = (niz) => {
+  let sveMax = ``;
+  niz.forEach((e) => {
+    if(e.length == najvecaduzStr(elem)){
+      // sveMax += ` ${e}`; // ovo u stringu da se ispise
+      console.log(`${e}`);// ovo jedno ispod drugog da se ispise
+    }
+  });
+  // return sveMax;
+};
+// pogledaj sutra nije mi bas najjasnije ali sam na dobrom putu
 
+console.log(najvecaduzStr(elem));
+sveMaxDuz(elem);
 //Odrediti broj elemenata u nizu stringova čija je dužina veća od prosečne dužine svih stringova u nizu.
 console.log("Zadatak 21.----------");
 elem = ["Mila", "Milos", "-20", "Marko", "235", "0"];

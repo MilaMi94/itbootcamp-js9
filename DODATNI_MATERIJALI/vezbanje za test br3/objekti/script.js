@@ -59,7 +59,7 @@ let s4 = {
   ime: "Maja",
   prezime: "Bogdanovic",
   godStudija: 3,
-  ocene: [10, 10, 10, 10, 9], //9.8
+  ocene: [10, 10, 9, 9, 9], //9.8
 };
 let students = [s1, s2, s3, s4];
 // pocetno slovo
@@ -157,11 +157,82 @@ console.log("ekstra student-------------------");
 // samo 9 i 10, br 10 bar duplo veci od br 9
 let ekstraStudenti = (niz) => {
   niz.forEach((s) => {
-    if (!s.ocene.includes(6) && !s.ocene.includes(7) && !s.ocene.includes(8)) {
-      console.log(s.ocene);
-    
+    let ocene = s.ocene; // niz svakog studenta ocene
+    if (
+      !ocene.includes(6) &&
+      !ocene.includes(7) &&
+      !ocene.includes(8) &&
+      desetViseodDevet(ocene)
+    ) {
+      console.log(`${s.ime} ${s.prezime}`);
     }
   });
 };
 
+let desetViseodDevet = (niz) => {
+  let br10 = 0;
+  let br9 = 0;
+  for (let i = 0; i < niz.length; i++) {
+    if (niz[i] == 10) {
+      br10++;
+    }
+    if (niz[i] == 9) {
+      br9++;
+    }
+  }
+  if (br10 >= 2 * br9) {
+    return true;
+  }
+};
+
 ekstraStudenti(students);
+// bruka
+/*
+let bruka = (studenti) => {
+  let br = 0;
+  studenti.forEach((student) => {
+    let bruka = true;
+    let brIspita = student.ocene.length;
+    if (student.godina == 1 || brIspita > 3 * (student.godina - 1)) {
+      bruka = false;
+    } else {
+      student.ocene.forEach((ocena) => {
+        if (ocena > 7) {
+          bruka = false;
+        }
+      });
+    }
+    if (bruka) {
+      br++;
+      console.log(`${student.ime} ${student.prezime}`);
+    }
+  });
+  return br;
+};
+console.log(`Broj studenata koji se brukaju je ${bruka(studenti)}`);
+
+//aljkav
+
+let aljkavStudent = (studenti) => {
+  studenti.forEach((student) => {
+    let ocene = student.ocene;
+    student.aljkav = true;
+    ocene.forEach((ocena) => {
+      if (ocena > 7) {
+        student.aljkav = false;
+      }
+    });
+  });
+  let nemaALjkavih = true;
+  studenti.forEach((student) => {
+    if (student.aljkav) {
+      console.log(`Aljkav student: ${student.ime} ${student.prezime}`);
+      nemaALjkavih = false;
+    }
+  });
+  if (nemaALjkavih) {
+    console.log(`Nema aljkavih studenata`);
+  }
+};
+aljkavStudent(studenti);
+*/
