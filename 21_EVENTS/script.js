@@ -142,3 +142,5 @@ btnIzracunaj3.addEventListener("click", () => {
   let value3 = Math.PI * inputPoluprecnik.value **2 ;
   spanRez3.innerHTML = value3;
 });
+
+console.log("Hello im $s string", "+po");
