@@ -186,6 +186,11 @@ let desetViseodDevet = (niz) => {
 };
 
 ekstraStudenti(students);
+
+
+
+
+
 // bruka
 /*
 let bruka = (studenti) => {
