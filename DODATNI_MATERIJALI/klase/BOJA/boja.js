@@ -40,7 +40,7 @@ class Boja {
         return this.#intenzitet;
     }
 
-    //metode
+    //metode nema za sada
 
     
 
