@@ -16,10 +16,10 @@ class Pacijent {
 
   //visina
   set visina(v) {
-    if (v > 0 && v < 250) {
+    if (v > 0 && v < 2.5) {
       this._visina = v;
     } else {
-      this._visina = 150;
+      this._visina = 1.7;
     }
   }
 
@@ -45,8 +45,18 @@ class Pacijent {
     console.log(this);
   }
 
+  stampajListu(){
+    let htmlLista = `
+    <ul>
+    <li>Ime: ${this.ime}</li>
+    <li>Visina: ${this.visina}m</li>
+    <li>Težina: ${this.tezina}kg</li>
+    </ul>`
+    return htmlLista;
+  }
+
   bmi() {
-    let bmi = this.tezina / ((this.visina / 100) ** 2);
+    let bmi = this.tezina / ((this.visina) ** 2);
     return bmi;
   }
 

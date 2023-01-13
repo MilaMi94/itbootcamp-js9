@@ -1,48 +1,66 @@
 class Film {
-    #naslov;
-    #reziser;
-    #godinaIzdanja;
-  constructor(n, r, g) {
+  constructor(n, r, g, o) {
     this.naslov = n;
     this.reziser = r;
     this.godinaIzdanja = g;
+    this.ocene = o;
   }
-  stampaj() {
-    console.log(`${this.naslov} - ${this.reziser} (${this.godinaIzdanja})`);
-  }
+
   //seteri
   set naslov(n) {
     if (n.length > 0) {
-      this.#naslov = n;
+      this._naslov = n;
     } else {
-      this.#naslov = "Film";
+      this._naslov = "Film";
     }
   }
   set reziser(r) {
     if (r.length > 0) {
-      this.#reziser = r;
+      this._reziser = r;
     } else {
-      this.#reziser = "John Doe";
+      this._reziser = "John Doe";
     }
   }
   set godinaIzdanja(gi) {
     if (gi < 1800) {
-      this.#godinaIzdanja = 1800;
+      this._godinaIzdanja = 1800;
     } else {
-      this.#godinaIzdanja = gi;
+      this._godinaIzdanja = gi;
+    }
+  }
+  set ocene(o) {
+    if (Array.isArray(o)) {
+      this._ocene = o;
+    } else {
+      this._ocene = [];
     }
   }
 
   //geteri
 
   get naslov() {
-    return this.#naslov;
+    return this._naslov;
   }
   get reziser() {
-    return this.#reziser;
+    return this.__reziser;
   }
   get godinaIzdanja() {
-    return this.#godinaIzdanja;
+    return this._godinaIzdanja;
+  }
+  get ocene() {
+    return this._ocene;
+  }
+  //metode
+
+  stampaj() {
+    console.log(`${this.naslov} - ${this.reziser} (${this.godinaIzdanja})`);
+  }
+  prosek() {
+    let sumaOcena = 0;
+    this.ocene.forEach((o) => {
+      sumaOcena += o;
+    });
+    return sumaOcena / this.ocene.length;
   }
 }
 

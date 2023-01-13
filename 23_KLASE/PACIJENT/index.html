@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zadatak Pacijent</title>
+    <style>
+        button{
+            padding: 5px;
+            background-color: rgb(176, 240, 219);
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        button:focus{
+            background-color: rgb(9, 112, 78);
+            color: white;
+            font-weight: bold;
+        }
+        .rez{
+            color: brown;
+            font-weight: bold;
+        }
+        body {
+            overflow: hidden;
+        }
+        div{
+            float: left;
+        }
+    </style>
 </head>
 <body>
+    <div>
+        <button id="razunajMinTezinu">Najmanja težina pacijenta</button>
+        <p class="rez" id="minTezina"></p>
+    </div>
+    <div>
+        <button id="maxBmi">Pacijenti sa najvecom BMI vrednošću</button>
+        <p class="rez"  id="maxBmiRez"></p>
+    </div>
+    <div>
+        <button id="pacSlovo">Pacijenti čije ime sadrži slovo A</button>
+        <p class="rez" id="pacSlovoRez"></p>
+    </div>
+
+    <div>
+        <button id="srVis">Srednja visina svih pacijenta</button>
+        <p class="rez"  id="srVisRez"></p>
+    </div>
+
     <script type="module" src="script.js"></script>
     
 </body>
