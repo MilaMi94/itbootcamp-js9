@@ -5,9 +5,7 @@ Napraviti funkciju ispitajSličnost koja za dve prosleđene boje vraća true uko
 Napraviti funkciju srednjaTalasnaDuzina koja za niz boja vraća vrednost srednje talasne dužine. */
 
 class Boja {
-    #talasnaDuzina;
-    #zasicenje;
-    #intenzitet
+   
 
     constructor(td, z, i) {
         // ovde se pozivaju seteri
@@ -17,27 +15,27 @@ class Boja {
     }
     //talasna duzina
     set talasnaDuzina(td){
-        this.#talasnaDuzina = td;
+        this._talasnaDuzina = td;
     }
     get talasnaDuzina(){
-        return this.#talasnaDuzina;
+        return this._talasnaDuzina;
     }
 
     //zasicenje
     set zasicenje(z) {
-        this.#zasicenje = z;
+        this._zasicenje = z;
     }
 
     get zasicenje(){
-        return this.#zasicenje;
+        return this._zasicenje;
     }
 
     //intenzitet
     set intenzitet(i){
-        this.#intenzitet = i;
+        this._intenzitet = i;
     }
     get intenzitet(){
-        return this.#intenzitet;
+        return this._intenzitet;
     }
 
     //metode nema za sada
