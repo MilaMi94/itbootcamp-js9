@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-size: 22px;
+}
+h1 {
+  margin-left: 10px;
+  color: dodgerblue;
+}
+ul {
+  padding-inline-start: 0px;
+}
+li {
+  list-style-type: none;
+  background-color: lightblue;
+  margin: 10px;
+  padding: 10px;
+  width: 270px;
+  border: 1px dotted blue;
+}
+li:hover {
+  background-color: dodgerblue;
+  cursor: pointer;
+  color: white;
+}
+
+input {
+  margin-left: 10px;
+  width: 280px;
+}
+
+button {
+
+  margin-left: 15px;
+  margin-top: 15px;
+  text-align: center;
+  background-color: dodgerblue;
+  width: 280px;
+  height: 50px;
+  
+}
