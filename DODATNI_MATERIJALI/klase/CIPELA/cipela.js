@@ -21,23 +21,22 @@ export class Cipela {
   }
 
   //prepravke
-  set prepravke(p){
+  set prepravke(p) {
     this._prepravke = p;
   }
-  get prepravke(){
+  get prepravke() {
     return this._prepravke;
   }
 
   //metode
 
-  zalepi(){
-    return innerHTML = `Zalepljena cipela`;
+  zalepi(parent) {
+    parent.innerHTML += `Zalepljena cipela`;
   }
-  prosiri(){
-    return innerHTML = `Prosirena cipela`;
+  prosiri(parent) {
+    parent.innerHTML += `Prosirena cipela`;
   }
-  usij(){
-    return innerHTML = `Usivena cipela`;
+  usij(parent) {
+    parent.innerHTML += `Usivena cipela`;
   }
-
 }

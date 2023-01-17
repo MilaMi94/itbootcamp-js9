@@ -19,15 +19,14 @@ let upisaniKrug = (o1, o2) => {
 
 console.log(upisaniKrug(k1, k2));
 
-// rastuci Proveri s Milosa
+// rastuci 
 
 let rastuci = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i + 1].poluprecnik < arr[i].poluprecnik) {
       return false;
     }else{
-        return true;
-    }
+     }
   }
 
 };

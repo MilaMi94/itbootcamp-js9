@@ -1,0 +1,1 @@
+import { Automobil } from "./automobil.js";

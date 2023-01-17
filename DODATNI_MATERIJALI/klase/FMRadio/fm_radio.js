@@ -1,20 +1,24 @@
 export class FMRadio {
   constructor(s, f, jt) {
-    this.stranica = s;
+    this.stanica = s;
     this.frekvencija = f;
     this.jacinaTona = jt;
   }
   //stranica
-  set stranica(s) {
-    this._stranica = s;
+  set stanica(s) {
+    this._stanica = s;
   }
-  get stranica() {
-    return this._stranica;
+  get stanica() {
+    return this._stanica;
   }
 
   //frekvencija
   set frekvencija(f) {
-    if (f >= 87.5 && f <= 108) {
+    if (f > 108) {
+      this._frekvencija = 108;
+    } else if (f < 87.5) {
+      this._frekvencija = 87.5;
+    } else {
       this._frekvencija = f;
     }
   }
@@ -25,7 +29,11 @@ export class FMRadio {
   //jacinaTona
 
   set jacinaTona(jt) {
-    if (jt >= 0 && jt <= 20) {
+    if (jt < 0) {
+      this._jacinaTona = 0;
+    } else if (jt > 20) {
+      this._jacinaTona = 20;
+    }else{
       this._jacinaTona = jt;
     }
   }
@@ -36,10 +44,13 @@ export class FMRadio {
 
   //metode
   promeniZvuk(simbol) {
-    if (simbol == "+" && this.jacinaTona < 20 && this.jacinaTona >=0) {
+    if (simbol == "+" && this.jacinaTona < 20 && this.jacinaTona >= 0) {
       this.jacinaTona++;
     } else if (simbol == "-" && this.jacinaTona <= 20 && this.jacinaTona > 0) {
       this.jacinaTona--;
     }
+  }
+  frekvencijaIskljuci() {
+    this.frekvencija = 87.5;
   }
 }
