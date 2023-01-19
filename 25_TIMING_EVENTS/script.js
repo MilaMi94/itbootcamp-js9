@@ -20,6 +20,7 @@ setInterval(() => {
 let btn1 = document.querySelector("#click1");
 let btn2 = document.querySelector("#click2");
 let btn3 = document.querySelector("#click3");
+let btn4 = document.querySelector("#click4");
 let ispis = document.querySelector("#ispis");
 let tajmer = null;
 
@@ -42,14 +43,48 @@ btn2.addEventListener("click", function (e) {
   clearTimeout(tajmer);
   tajmer = null;
 });
-   
 
+let vr = 0;
+let clock = null;
+// da bi izbegavali postavljanje vise satova uvodimo if(clock == null), i onda kad vise pua kliknemo na dugme onda ne uvode se novi satovi
 btn3.addEventListener("click", () => {
-  setInterval(() => {
-    let datum = new Date();
-    let h = datum.getHours();
-    let m = datum.getMinutes();
-    let s = datum.getSeconds();
-    ispis.innerHTML = `${h}:${m}:${s}`;
-  }, 1000);
+  if (clock == null) {
+    clock = setInterval(() => {
+      /*  let datum = new Date();
+      let h = datum.getHours();
+      let m = datum.getMinutes();
+      let s = datum.getSeconds();*/
+      vr++;
+      ispis.innerHTML = vr;
+    }, 1000);
+  }
+});
+
+btn4.addEventListener("click", () => {
+  clearInterval(clock);
+  clock = null;
+});
+// zadatak Napraviti dva dugmeta i input kao na slici.Klikom na dugme „Start“, počinje odbrojavanje: Ispisuju se redom brojevi 1, 2, 3, ... svake sekunde. Klikom na dugme „Stop“ pauzira se odbrojavanje.
+let btnStart = document.getElementById("start");
+let inputCount = document.getElementById("count");
+let btnStop = document.getElementById("stop");
+//start btn
+
+let br = -1;
+let counter = null;
+btnStart.addEventListener("click", () => {
+  if (counter == null) {
+    counter = setInterval(() => {
+      br++;
+      inputCount.value = br;
+    }, 1000);
+  }
+});
+
+// stop btn
+btnStop.addEventListener("click", () => {
+  clearInterval(counter);
+  counter = null;
+  br = -1;
+  inputCount.value = " ";
 });
