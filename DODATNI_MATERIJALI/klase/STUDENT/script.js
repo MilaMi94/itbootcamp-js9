@@ -1,10 +1,10 @@
 import { Student } from "./student.js";
 console.log(Math.round(7));
 
-let s1 = new Student("0511994745071", "Mila", "Ilic", [5, 6, 9, 10]);
+let s1 = new Student("0511004745071", "Mila", "Ilic", [5, 6, 9, 10]);
 let s2 = new Student("2307997705022", "Jeka", "Jovic", [10, 10, 9, 10]);
 let s3 = new Student("3011997556012", "Uros", "Nikolic", [9, 9, 9, 10]);
-let s4 = new Student("0101002020402", "Ana", "Jovic", [5, 4, 9, 10]);
+let s4 = new Student("0101002020402", "Ana", "Jovic", [8, 8, 8, 8]);
 
 let studenti = [s1, s2, s3, s4];
 
@@ -102,22 +102,56 @@ let najmanjaOcena = (niz) => {
 najmanjaOcena(studenti);
 
 //najcescaOcena
+let nizSvihOcena = (niz) => {
+  let nizOcena = [];
+  niz.forEach((s) => {
+    s.nizOcena.forEach((o) => {
+      nizOcena.push(o);
+    });
+  });
+  return nizOcena;
+};
+console.log(nizSvihOcena(studenti));
 
-
+let najcescaOcena = (niz) => {
+  let nizOcena = nizSvihOcena(niz);
+  let najcescaOcena = nizOcena[0];
+  let brPonavljanja = 1;
+  for (let i = 0; i < nizOcena.length; i++) {
+    let brPonavljanjaTrenutnog = 1;
+    for (let j = 0; j < nizOcena.length; j++) {
+      if (nizOcena[i] == nizOcena[j]) {
+        brPonavljanjaTrenutnog++;
+      }
+    }
+    if (brPonavljanjaTrenutnog > brPonavljanja) {
+      brPonavljanja = brPonavljanjaTrenutnog;
+      najcescaOcena = nizOcena[i];
+    }
+  }
+  console.log(najcescaOcena);
+};
+najcescaOcena(studenti);
 
 //rodjeniGodine
 
 let rodjeniGodine = (g) => {
+  let nizStudenti = studenti;
+  let jmbg = nizStudenti[0].jmbg;
   let godina = 1000;
-  let jmbg = studenti[0].jmbg;
+  let br = 2;
   console.log(jmbg);
   for (let i = 4; i < 7; i++) {
     console.log(jmbg[i]);
-    if (i[4] == 9) {
-        godina += jmbg[4]*100;
-        godina  
+    if (jmbg[4] == 0) {
+      godina += jmbg[i] * 10 ** 3;
+      br--;
+    } else {
+      godina += jmbg[i] * 10 ** br;
+      br--;
     }
   }
+  console.log(godina);
 };
 
 rodjeniGodine(1994);
