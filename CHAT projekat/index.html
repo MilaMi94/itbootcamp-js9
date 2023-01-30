@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>ITBootcamp Chat</h1>
+      <h3>Choose a chatroom</h3>
+    </header>
+
+    <!-- Rooms -->
+    <nav>
+      <button class="btn">#general</button>
+      <button class="btn">#js</button>
+      <button class="btn">#homework</button>
+      <button class="btn">#tests</button>
+    </nav>
+
+    <!-- Section -->
+    <section>
+      <!-- Messages -->
+    </section>
+
+    <!-- Form for submiting message -->
+    <form action="">
+      <input type="text" name="" id="" placeholder="Your message..." />
+      <input type="submit" value="Send" class="btn" />
+    </form>
+
+    <!-- Form for updating username -->
+    <form action="">
+      <input type="text" name="" id="" placeholder="Update username..." />
+      <input type="submit" value="Update" class="btn" />
+    </form>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC-1LzpUOVOEIhh2f4T7oTgyYRO_S_Q2o8",
+        authDomain: "itbootcamp-e1d32.firebaseapp.com",
+        projectId: "itbootcamp-e1d32",
+        storageBucket: "itbootcamp-e1d32.appspot.com",
+        messagingSenderId: "345097194534",
+        appId: "1:345097194534:web:ccb09203111aa2b3a72ae7",
+        measurementId: "G-RVNHFDZG6P",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+
+    </script>
+    <script src="chat.js"></script>
+    
+  </body>
+</html>
