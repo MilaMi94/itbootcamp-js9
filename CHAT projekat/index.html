@@ -9,35 +9,64 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <h1>ITBootcamp Chat</h1>
-      <h3>Choose a chatroom</h3>
+    <header class="row">
+      <div class="col-2">&nbsp</div>
+      <div class="col-8">
+        <h1>ITBootcamp Chat <img src="chat_icon.png" width="10%" alt="" /></h1>
+        <h3>Choose a chatroom</h3>
+      </div>
+
+      <div class="col-2"></div>
     </header>
 
     <!-- Rooms -->
-    <nav>
-      <button class="btn">#general</button>
-      <button class="btn">#js</button>
-      <button class="btn">#homework</button>
-      <button class="btn">#tests</button>
+    <nav class="row">
+      <div class="col-2">&nbsp</div>
+      <button id="btnGeneral" class="btn col-2">#general</button>
+      <button id="btnJs" class="btn col-2">#js</button>
+      <button id="btnHomework" class="btn col-2">#homework</button>
+      <button id="btnTests" class="btn col-2">#tests</button>
+      <div class="col-2">&nbsp</div>
     </nav>
 
     <!-- Section -->
-    <section>
-      <!-- Messages -->
+    <section class="row">
+      <div class="col-2">&nbsp</div>
+      <ul class="col-8">
+        <!-- Messages -->
+      </ul>
+      <div class="col-2">&nbsp</div>
     </section>
 
     <!-- Form for submiting message -->
-    <form action="">
-      <input type="text" name="" id="" placeholder="Your message..." />
-      <input type="submit" value="Send" class="btn" />
+    <form id="form_message" class="row" action="">
+      <div class="col-2">&nbsp</div>
+      <input
+        type="text"
+        name=""
+        id="message"
+        class="col-6"
+        placeholder="Your message..."
+      />
+      <input type="submit" value="Send" class="btn col-2" />
+      <div class="col-2">&nbsp</div>
     </form>
+    <div class="row" id="divMessage"></div>
 
     <!-- Form for updating username -->
-    <form action="">
-      <input type="text" name="" id="" placeholder="Update username..." />
-      <input type="submit" value="Update" class="btn" />
+    <form id="form_username" class="row" action="">
+      <div class="col-2">&nbsp</div>
+      <input
+        type="text"
+        name=""
+        id="username"
+        class="col-6"
+        placeholder="Update username..."
+      />
+      <input type="submit" value="Update" class="btn col-2" />
+      <div class="col-2">&nbsp</div>
     </form>
+    <div class="row" id="divUsername"></div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
@@ -58,9 +87,8 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       let db = firebase.firestore();
-
     </script>
-    <script src="chat.js"></script>
-    
+
+    <script type="module" src="app.js"></script>
   </body>
 </html>

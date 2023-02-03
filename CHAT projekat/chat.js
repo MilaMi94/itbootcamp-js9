@@ -1,8 +1,9 @@
-class Chatroom {
+export class Chatroom {
   constructor(r, u) {
     this.room = r;
     this.username = u;
     this.chats = db.collection("chats");
+    this.unsub;
   }
   // room
   set room(r) {
@@ -13,10 +14,10 @@ class Chatroom {
   }
 
   //username
-
   set username(u) {
-    if (u.length > 2 && u.length < 10) {
+    if (u.length > 2 && u.length < 10 && u.trim().length != 0) {
       this._username = u;
+      localStorage.setItem("username", u);
     } else {
       alert(`Invalid input for username property`);
     }
@@ -24,6 +25,15 @@ class Chatroom {
   get username() {
     return this._username;
   }
+  // update room
+
+  updateRoom(ur) {
+    this.room = ur;
+    if (this.unsub) {
+      this.unsub();
+    }
+  }
+
   // method for adding chat
   async addChat(mess) {
     let date = new Date();
@@ -37,42 +47,19 @@ class Chatroom {
     let response = await this.chats.add(docChat);
     return response;
   }
+
   // callback method which listens changes in database
   getChats(callback) {
-    this.chats
+    this.unsub = this.chats
       .where("room", "==", this.room)
       .orderBy("created_at")
       .onSnapshot((snapshot) => {
         snapshot.docChanges().forEach((change) => {
           if (change.type == "added") {
-            console.log(change.doc.data());
+            callback(change.doc.data());
           }
         });
       });
   }
 }
 
-// test
-let chatroom1 = new Chatroom("#general", "anapetrovic");
-let chatroom2 = new Chatroom("#random", "amanda");
-console.log(chatroom1);
-console.log(chatroom1.username);
-console.log(chatroom1.room);
-
-console.log(chatroom2);
-console.log(chatroom2.room);
-
-// adding message test
-/*
-chatroom2
-  .addChat("testiraj metodu addChat")
-  .then(() => {
-    console.log(`Message added`);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-*/
-
-
-chatroom2.getChats();
