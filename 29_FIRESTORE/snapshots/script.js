@@ -59,32 +59,7 @@ form.addEventListener("submit", function (e) {
 // mnogo je bolje pristupiti snapshotovima
 // odnosno, osluskivati promene u kolekciji
 
-db.collection("tasks").onSnapshot((snapshot) => {
-  let changes = snapshot.docChanges();
-  changes.forEach((change) => {
-    let type = change.type; // tip promene (added, removed)
-    let doc = change.doc; // sam dokument koji je izazvao promenu
-    if (type == "added") {
-      let task = doc.data();
-      let li = document.createElement("li");
-      li.id = doc.id;
-      li.innerHTML = `${task.title} (${task.start_date.toDate()}) [${
-        task.description
-      }]`;
-      if (task.priority == true) {
-        li.style.color = "red";
-      }
-      ul.append(li);
-      let button = document.createElement("button");
-      button.innerHTML = "Obrisi task";
-      li.append(button);
-    } else if (type == "removed") {
-      let id = doc.id;
-      let li = document.getElementById(id);
-      li.remove();
-    }
-  });
-});
+ 
 // ovo ne vraca promis pa nema then i catch
 
 ul.addEventListener("click", function (e) {
